@@ -1,0 +1,19 @@
+{
+    "welcome": "أهلاً بك في تطبيقي!",
+    "login": "تسجيل الدخول",
+    "register": "التسجيل",
+    "language": "Arabic",
+    "dontHaveAccount": "ليس لديك حساب؟",
+    "reset": "إعادة تعيين",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة السر",
+    "createNewUser": "إنشاء مستخدم جديد",
+    "backToLogin": "العودة إلى تسجيل الدخول",
+    "dashboard": {
+      "title": "Dashboard"
+    },
+    "fineDetail": {
+      "title": "Fine Detail"
+    }
+  }
+  

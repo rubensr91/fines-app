@@ -1,0 +1,60 @@
+Arguments: 
+  /home/ruben/.nvm/versions/node/v16.19.1/bin/node /snap/node/7222/bin/yarn.js global dir
+
+PATH: 
+  /home/ruben/.nvm/versions/node/v16.19.1/bin:/home/ruben/bin:/usr/local/bin:/home/ruben/bin:/usr/local/bin:/home/ruben/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ruben/.local/share/JetBrains/Toolbox/scripts
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.19.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: ../../package.json: EACCES: permission denied, write
+      at writeSync (node:fs:920:3)
+      at SyncWriteStream._write (node:internal/fs/sync_write_stream:26:3)
+      at writeOrBuffer (node:internal/streams/writable:391:12)
+      at _write (node:internal/streams/writable:332:10)
+      at SyncWriteStream.Writable.write (node:internal/streams/writable:336:10)
+      at ConsoleReporter.warn (/snap/node/7222/lib/cli.js:92855:17)
+      at warn (/snap/node/7222/lib/cli.js:51326:23)
+      at module.exports.exports.default (/snap/node/7222/lib/cli.js:37409:7)
+      at /snap/node/7222/lib/cli.js:51337:51
+      at Generator.next (<anonymous>)
+
+npm manifest: 
+  {
+    "name": "app",
+    "version": "1.0.0",
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web"
+    },
+    "dependencies": {
+      "@expo/webpack-config": "^0.17.2",
+      "expo": "~47.0.12",
+      "expo-dev-client": "~2.0.1",
+      "expo-status-bar": "~1.4.2",
+      "react": "18.1.0",
+      "react-dom": "18.1.0",
+      "react-native": "0.70.5",
+      "react-native-web": "~0.18.9"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.9"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

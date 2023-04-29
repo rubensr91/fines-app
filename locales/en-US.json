@@ -1,0 +1,19 @@
+{
+    "welcome": "Welcome",
+    "login": "Log in",
+    "register": "Register",
+    "language": "English",
+    "dontHaveAccount": "Don't you have an account?",
+    "reset": "Reset",
+    "email": "Email",
+    "password": "Password",
+    "createNewUser": "Create new user",
+    "backToLogin": "Back to login",
+    "dashboard": {
+      "title": "Dashboard"
+    },
+    "fineDetail": {
+      "title": "Fine Detail"
+    }
+  }
+  

@@ -1,0 +1,40 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "postinstall": "node_modules/.bin/rn-nodeify --install crypto,fs,https --hack"
+  },
+  "dependencies": {
+    "@expo/webpack-config": "^18.0.1",
+    "@react-native-async-storage/async-storage": "^1.18.1",
+    "@react-navigation/stack": "^6.3.16",
+    "dotenv": "^12.0.3",
+    "expo": "^47.0.13",
+    "expo-dev-client": "~2.0.1",
+    "expo-status-bar": "~1.4.2",
+    "expo-updates": "~0.15.6",
+    "firebase": "^9.17.1",
+    "i18next": "^22.4.10",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-i18next": "^12.2.0",
+    "react-native": "0.70.8",
+    "react-native-config": "^1.5.0",
+    "react-native-fs": "^2.20.0",
+    "react-native-gesture-handler": "~2.8.0",
+    "react-native-reanimated": "~2.12.0",
+    "react-native-screens": "~3.18.0",
+    "react-native-web": "^0.18.12",
+    "react-navigation": "^4.4.4",
+    "rn-nodeify": "^10.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9"
+  },
+  "private": true
+}
