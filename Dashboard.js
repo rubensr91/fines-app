@@ -12,13 +12,14 @@ import {
 
 import ButtonBar from "./ButtonBar";
 import i18n from "./i18n";
+import { ScrollView } from "react-native-gesture-handler";
 
 const FINES_EN = [
-  { id: 1, description: "Speeding", amount: "$100.00", date: "2023-01-02" },
+  { id: 1, description: "Speeding", amount: "100.00", date: "2023-01-02" },
   {
     id: 2,
     description: "Disobeying traffic signals",
-    amount: "$75.00",
+    amount: "75.00",
     date: "2023-04-12",
   },
 ];
@@ -27,18 +28,18 @@ const FINES_AR = [
   {
     id: 1,
     description: "تجاوز السرعة المسموح بها",
-    amount: "100 ريال",
+    amount: "100",
     date: "2023-01-02",
   },
   {
     id: 2,
     description: "عدم احترام الإشارة الضوئية",
-    amount: "75 ريال",
+    amount: "75",
     date: "2023-04-12",
   },
 ];
 
-const Dashboard = ({ navigation }) => {
+const Dashboard = ({ navigation, params }) => {
   const [language, setLanguage] = useState("en-US");
   const { t } = useTranslation();
 
@@ -69,7 +70,7 @@ const Dashboard = ({ navigation }) => {
         <View style={styles.fineContainer}>
           <Text style={styles.fineDescription}>{item.description}</Text>
           <Text style={styles.fineDate}>{item.date}</Text>
-          <Text style={styles.fineAmount}>{item.amount}</Text>
+          <Text style={styles.fineAmount}>{item.amount} SAR</Text>
         </View>
       </TouchableOpacity>
     );
@@ -88,7 +89,7 @@ const Dashboard = ({ navigation }) => {
         />
         <Text style={[styles.switchLabel]}>{t("language")}</Text>
       </View>
-      <Text style={styles.title}>{i18n.t("dashboard.title")}</Text>
+      <Text style={styles.title}>{t("dashboard.title")}</Text>
 
       <View style={styles.switchContainer}>
         <Switch
@@ -100,11 +101,30 @@ const Dashboard = ({ navigation }) => {
         <Text style={[styles.switchLabel]}>{t("language")}</Text>
       </View>
 
+      <View>
+        <Text style={styles.subTitle}>Loan Pending</Text>
+        <View style={styles.fineContainer}>
+          <Text style={styles.fineAmount}>2,175 SAR</Text>
+        </View>
+      </View>
+
+      <View>
+        <Text style={styles.subTitle}>Violations Total Pending</Text>
+        <View style={styles.fineContainer}>
+          <Text style={styles.fineAmount}>175 SAR</Text>
+        </View>
+      </View>
+
+      <View>
+        <Text style={styles.subTitle}>Violations Details</Text>
+      </View>
+
       <FlatList
         data={fines}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
       />
+
       <ButtonBar />
     </View>
   );
@@ -113,20 +133,28 @@ const Dashboard = ({ navigation }) => {
 const styles = StyleSheet.create({
   dashboard: {
     flex: 1,
-    paddingTop: 60,
+    paddingTop: 40,
     backgroundColor: "#1A5276",
   },
   title: {
-    fontSize: 24,
+    fontSize: 32,
     fontWeight: "bold",
     marginBottom: 20,
     paddingHorizontal: 20,
   },
+  subTitle: {
+    fontSize: 22,
+    fontWeight: "bold",
+    marginBottom: 10,
+    marginTop: 10,
+    paddingHorizontal: 20,
+  },
   fineContainer: {
     paddingHorizontal: 20,
-    paddingVertical: 30,
-    marginVertical: 5,
+    paddingVertical: 20,
+    margin: 5,
     backgroundColor: "#7f8fa6",
+    borderRadius: 15
   },
   fineDescription: {
     fontSize: 16,

@@ -1,25 +1,12 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRoute } from "@react-navigation/native";
-import React, { useEffect } from "react";
+import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 import ButtonBar from "./ButtonBar";
-import i18n from "./i18n";
 
 const FineDetail = () => {
   const route = useRoute();
   const fine = route.params.fine;
-
-  useEffect(() => {
-    AsyncStorage.getItem("language")
-      .then((value) => {
-        if (value) {
-          setLanguage(value);
-          i18n.changeLanguage(value);
-        }
-      })
-      .catch((error) => console.log(error));
-  }, []);
 
   return (
     <View style={styles.dashboard}>
@@ -31,7 +18,7 @@ const FineDetail = () => {
           <Text style={styles.label}>Date:</Text>
           <Text style={styles.text}>{fine.date}</Text>
           <Text style={styles.label}>Amount:</Text>
-          <Text style={styles.text}>${fine.amount}</Text>
+          <Text style={styles.text}>{fine.amount} SAR</Text>
         </View>
       </View>
       <ButtonBar />

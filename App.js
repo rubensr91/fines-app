@@ -4,12 +4,10 @@ import Login from "./Login";
 import Signup from "./Signup";
 import Dashboard from "./Dashboard";
 import FineDetail from "./FineDetail";
-import Constants from 'expo-constants';
-const appConfig = Constants.manifest;
 
 const Stack = createStackNavigator();
 
-function App() {
+function App() { 
   return (
     <NavigationContainer>
       <Stack.Navigator>

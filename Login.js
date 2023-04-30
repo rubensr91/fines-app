@@ -41,12 +41,13 @@ const Login = ({ navigation }) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
+        setEmail(user.email);
         navigation.navigate("Dashboard");
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.error(errorMessage);
+        console.error(errorCode + errorMessage);
         setErrorMessage("Incorrect email or password.");
       });
   };
