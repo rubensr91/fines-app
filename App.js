@@ -7,10 +7,10 @@ import FineDetail from "./FineDetail";
 
 const Stack = createStackNavigator();
 
-function App() { 
+const App = () => { 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Dashboard" component={Dashboard} />
@@ -19,5 +19,4 @@ function App() {
     </NavigationContainer>
   );
 }
-
 export default App;

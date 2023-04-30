@@ -87,7 +87,7 @@ const Login = ({ navigation }) => {
           value={language === "ar-SA"}
           onValueChange={toggleLanguage}
           thumbColor="#fff"
-          trackColor={{ false: "#333", true: "#7f8fa6" }}
+          trackColor={{ false: "#333", true: "#1F3447" }}
         />
         <Text style={[styles.switchLabel]}>{t("language")}</Text>
       </View>
@@ -141,12 +141,12 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#1A5276",
+    backgroundColor: "#002444",
   },
   title: {
     fontSize: 32,
     marginBottom: 32,
-    color: "#FFFE",
+    color: "#B8B8B8",
   },
   input: {
     height: 40,
@@ -175,20 +175,20 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   loginButton: {
-    backgroundColor: "#7f8fa6",
+    backgroundColor: "#1F3447",
     paddingVertical: 12,
     paddingHorizontal: 24,
     borderRadius: 6,
   },
   loginButtonText: {
-    color: "#fff",
+    color: "#B8B8B8",
     fontSize: 16,
   },
   signupLink: {
     marginTop: 24,
   },
   signupLinkText: {
-    color: "#fff",
+    color: "#B8B8B8",
     textDecorationLine: "underline",
     fontSize: 16,
   },
@@ -198,8 +198,11 @@ const styles = StyleSheet.create({
   },
   switchContainer: {
     position: "absolute",
-    top: 20,
+    top: 50,
     right: 20,
+  },
+  switchLabel: {
+    color: "#B8B8B8"
   },
 });
 

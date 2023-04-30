@@ -85,7 +85,7 @@ const Dashboard = ({ navigation, params }) => {
           value={language === "ar-SA"}
           onValueChange={toggleLanguage}
           thumbColor="#fff"
-          trackColor={{ false: "#333", true: "#7f8fa6" }}
+          trackColor={{ false: "#333", true: "#1F3447" }}
         />
         <Text style={[styles.switchLabel]}>{t("language")}</Text>
       </View>
@@ -96,27 +96,27 @@ const Dashboard = ({ navigation, params }) => {
           value={language === "ar-SA"}
           onValueChange={toggleLanguage}
           thumbColor="#fff"
-          trackColor={{ false: "#333", true: "#7f8fa6" }}
+          trackColor={{ false: "#333", true: "#1F3447" }}
         />
         <Text style={[styles.switchLabel]}>{t("language")}</Text>
       </View>
 
       <View>
-        <Text style={styles.subTitle}>Loan Pending</Text>
+        <Text style={styles.subTitle}>{t("dashboard.loan.title")}</Text>
         <View style={styles.fineContainer}>
-          <Text style={styles.fineAmount}>2,175 SAR</Text>
+          <Text style={styles.amountPending}>2,175 SAR</Text>
         </View>
       </View>
 
       <View>
-        <Text style={styles.subTitle}>Violations Total Pending</Text>
+        <Text style={styles.subTitle}>{t("dashboard.violationsTotal.title")}</Text>
         <View style={styles.fineContainer}>
-          <Text style={styles.fineAmount}>175 SAR</Text>
+          <Text style={styles.amountPending}>175 SAR</Text>
         </View>
       </View>
 
       <View>
-        <Text style={styles.subTitle}>Violations Details</Text>
+        <Text style={styles.subTitle}>{t("dashboard.violationsDetails.title")}</Text>
       </View>
 
       <FlatList
@@ -133,47 +133,54 @@ const Dashboard = ({ navigation, params }) => {
 const styles = StyleSheet.create({
   dashboard: {
     flex: 1,
-    paddingTop: 40,
-    backgroundColor: "#1A5276",
+    paddingTop: 80,
+    backgroundColor: "#002444",
   },
   title: {
     fontSize: 32,
-    fontWeight: "bold",
     marginBottom: 20,
     paddingHorizontal: 20,
+    color: "#B8B8B8",
   },
   subTitle: {
     fontSize: 22,
-    fontWeight: "bold",
     marginBottom: 10,
     marginTop: 10,
     paddingHorizontal: 20,
+    color: "#B8B8B8",
   },
   fineContainer: {
     paddingHorizontal: 20,
     paddingVertical: 20,
     margin: 5,
-    backgroundColor: "#7f8fa6",
+    backgroundColor: "#1F3447",
     borderRadius: 15
   },
   fineDescription: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "bold",
     marginBottom: 5,
-    color: "#000",
+    color: "#B8B8B8",
   },
   fineAmount: {
-    fontSize: 14,
-    color: "#005",
+    fontSize: 16,
+    color: "#B8B8B8",
   },
   fineDate: {
-    fontSize: 12,
-    color: "#005",
+    fontSize: 14,
+    color: "#B8B8B8",
+  },
+  amountPending: {
+    fontSize: 18,
+    color: "#B8B8B8",
   },
   switchContainer: {
     position: "absolute",
-    top: 20,
+    top: 50,
     right: 20,
+  },
+  switchLabel: {
+    color: "#B8B8B8"
   },
 });
 

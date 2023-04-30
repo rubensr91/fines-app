@@ -13,7 +13,7 @@ import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import { Switch } from "react-native";
 import i18n from "./i18n";
-import Constants from 'expo-constants';
+import Constants from "expo-constants";
 const appConfig = Constants.manifest;
 
 const firebaseConfig = {
@@ -89,7 +89,7 @@ const SignUpForm = ({ navigation }) => {
           value={language === "ar-SA"}
           onValueChange={toggleLanguage}
           thumbColor="#fff"
-          trackColor={{ false: "#333", true: "#7f8fa6" }}
+          trackColor={{ false: "#333", true: "#1F3447" }}
         />
         <Text style={[styles.switchLabel]}>{t("language")}</Text>
       </View>
@@ -103,7 +103,6 @@ const SignUpForm = ({ navigation }) => {
           {t("createNewUser")}
         </Text>
       </I18nextProvider>
-      <Text style={styles.errorMessage}>{errorMessage}</Text>
       <TextInput
         style={[
           styles.input,
@@ -123,6 +122,8 @@ const SignUpForm = ({ navigation }) => {
         value={password}
         secureTextEntry
       />
+      <Text style={styles.errorMessage}>{errorMessage}</Text>
+
       <View style={styles.buttonsContainer}>
         <TouchableOpacity style={styles.loginButton} onPress={handleSignup}>
           <Text style={styles.loginButtonText}>{t("register")}</Text>
@@ -143,12 +144,12 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#1A5276",
+    backgroundColor: "#002444",
   },
   title: {
     fontSize: 32,
     marginBottom: 32,
-    color: "#FFFE",
+    color: "#B8B8B8",
   },
   input: {
     height: 40,
@@ -177,20 +178,20 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   loginButton: {
-    backgroundColor: "#7f8fa6",
+    backgroundColor: "#1F3447",
     paddingVertical: 12,
     paddingHorizontal: 24,
     borderRadius: 6,
   },
   loginButtonText: {
-    color: "#fff",
+    color: "#B8B8B8",
     fontSize: 16,
   },
   signupLink: {
     marginTop: 24,
   },
   signupLinkText: {
-    color: "#fff",
+    color: "#B8B8B8",
     textDecorationLine: "underline",
     fontSize: 16,
   },
@@ -200,8 +201,11 @@ const styles = StyleSheet.create({
   },
   switchContainer: {
     position: "absolute",
-    top: 20,
+    top: 50,
     right: 20,
+  },
+  switchLabel: {
+    color: "#B8B8B8",
   },
 });
 

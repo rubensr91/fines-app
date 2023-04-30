@@ -31,18 +31,19 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "#1F3447",
     paddingVertical: 10,
   },
   button: {
-    backgroundColor: "#007AFF",
+    backgroundColor: "#002444",
     borderRadius: 10,
     paddingVertical: 10,
-    paddingHorizontal: 20,
+    paddingHorizontal: 40,
   },
   label: {
-    color: "white",
+    color: "#B8B8B8",
     fontWeight: "bold",
+    fontSize: 15
   },
 });
 

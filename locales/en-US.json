@@ -10,7 +10,16 @@
     "createNewUser": "Create new user",
     "backToLogin": "Back to login",
     "dashboard": {
-      "title": "Home"
+      "title": "Home",
+      "loan": {
+        "title": "Loan Pending"
+      },
+      "violationsTotal": {
+        "title": "Violations Total Pending"
+      },
+      "violationsDetails": {
+        "title": "Violations Details"
+      }
     },
     "fineDetail": {
       "title": "Fine Detail"

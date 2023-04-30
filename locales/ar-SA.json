@@ -10,7 +10,16 @@
     "createNewUser": "إنشاء مستخدم جديد",
     "backToLogin": "العودة إلى تسجيل الدخول",
     "dashboard": {
-      "title": "Dashboard"
+      "title": "Dashboard",
+      "loan": {
+        "title": "Loan Pending"
+      },
+      "violationsTotal": {
+        "title": "Violations Total Pending"
+      },
+      "violationsDetails": {
+        "title": "Violations Details"
+      }
     },
     "fineDetail": {
       "title": "Fine Detail"

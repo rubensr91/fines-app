@@ -29,9 +29,10 @@ const FineDetail = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#1F3447",
     paddingHorizontal: 20,
     paddingVertical: 30,
+    paddingTop: 80,
   },
   titleContainer: {
     borderBottomWidth: 2,
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
   titleFine: {
     fontSize: 24,
     fontWeight: "bold",
-    color: "#333",
+    color: "#B8B8B8",
   },
   infoContainer: {
     flexDirection: "column",
@@ -50,57 +51,19 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
   },
   label: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: "bold",
-    color: "#555",
+    color: "#B8B8B8",
     marginTop: 20,
   },
   text: {
-    fontSize: 18,
-    color: "#333",
+    fontSize: 22,
+    color: "#B8B8B8",
     marginBottom: 10,
   },
   dashboard: {
     flex: 1,
     paddingHorizontal: 0,
-  },
-  title: {
-    alignItems: "center",
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
-  buttonContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    width: "100%",
-  },
-  fineContainer: {
-    flex: 1,
-    paddingHorizontal: 80,
-    paddingVertical: 30,
-    marginVertical: 5,
-    backgroundColor: "#7f8fa6",
-    borderRadius: 0,
-  },
-  fineDescription: {
-    fontSize: 16,
-    fontWeight: "bold",
-    marginBottom: 5,
-    color: "#000",
-  },
-  fineAmount: {
-    fontSize: 14,
-    color: "#005",
-  },
-  fineDate: {
-    fontSize: 12,
-    color: "#005",
-  },
-  switchContainer: {
-    position: "absolute",
-    top: 20,
-    right: 20,
   },
 });
 
